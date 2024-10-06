@@ -3,12 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+    <link rel="stylesheet" href="style.css">
     <title>Frontend Mentor | Intro component with sign up form</title>
     </head>
 <body>
-    
+    <main>
+    <div class="page-container">
+            <div class="content-container">
+                <section class="headline-section">
+                    <div class="headings">
+                        <h1 class="text-800">Learn to code by watching others</h1>
+                        <p class="text-500">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+                    </div>
+                </section>
+                <section class="form-section">
+                    <div class="form-banner shadow rounded">
+                        <h4 class="text-500"><span class="text-700">Try it free 7 days</span> then $20/mo. thereafter</h4>
+                    </div>
+                    <div class="form-container shadow rounded">
+                        <fieldset class="form">
+                            <input type="text" name="firstname" id="firstname" class="text-input rounded-half input-firstname" placeholder="First Name">
+                            <input type="text" name="surname" id="surname" class="text-input rounded-half input-surname" placeholder="Last Name">
+                            <input type="text" name="email" id="email" class="text-input rounded-half input-email" placeholder="Email Address">
+                            <input type="password" name="password" id="password" class="text-input rounded-half input-password" placeholder="Password">
+                            <button class="btn btn-submit rounded-half"><span class="text-600">Claim your free trial</span></button>
+                        </fieldset>
+                    </div>
+                </section>
+            </div>
+    </div>
+    </main>
 </body>
 </html>
