@@ -54,7 +54,7 @@ body {
 }
 
 .shadow {
-    box-shadow: 0 0 5rem rgba(0,0,0,0.4);
+    filter: drop-shadow(0 .6rem 0 rgba(0,0,0,0.2));
 }
 
 .rounded {
@@ -76,7 +76,7 @@ body {
 .content-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 22.6rem 1fr;
+    grid-template-rows: min-content 1fr;
     padding: 6rem 2rem;
     width: min(100%, 53.9rem);
     gap: 6rem;
@@ -97,11 +97,18 @@ body {
 }
 
 .headings {
-    font-size: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.headings h1 {
+    font-size: clamp(2.6rem, 1.311vw + 2.108rem, 3rem);
 }
 
 .headings p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 175%;
 }
 
 .form-banner {
@@ -109,7 +116,7 @@ body {
     color: white;
     width: 100%;
     text-align: center;
-    padding: 4rem;
+    padding: 2rem;
     font-size: 1.5rem;
 }
 
@@ -117,6 +124,9 @@ body {
     width: 100%;
     background-color: white;
     padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
 }
 
 .form {
@@ -128,10 +138,12 @@ body {
 }
 
 .text-input {
-    border: 1px thin hsl(0,0,0,0.1);
+    border: 1px solid hsla(246, 25%, 77%, 0.5);
+    border-width: thin;
     min-height: 4.4rem;
     padding: 1.2rem;
-    font-weight: 600;
+    font-weight: 800;
+    outline: none;
 }
 
 .btn {
@@ -140,13 +152,48 @@ body {
     color: white;
     min-height: 5.6rem;
     text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+}
+
+.terms {
+    text-align: center;
+    color: var(--grayish-blue);
+    line-height: 200%;
+    font-size: 1.2rem;
+}
+
+.terms span {
+    color: var(--red);
+    
 }
 
 
 /* ! Reponsiveness */
 @media (min-width: 1080px) {
+
+    .page-container {
+        align-items: center;
+    }
+
     .content-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: min(35vw, 52.5rem) min(35vw, 54rem);
         grid-template-rows: 1fr;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .headings {
+        text-align: left;
+    }
+
+    .headings h1 {
+        font-size: clamp(4rem, 1.852vw + 2rem, 6rem);
+    }
+
+    .headings p {
+        font-size: 1.6rem;
     }
 }
