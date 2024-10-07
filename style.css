@@ -183,6 +183,11 @@ body {
 
 /* ! Error JS */
 
+.hide {
+    opacity: 0;
+    display: none;
+}
+
 .input-error {
     border: 2px solid red;
 }
