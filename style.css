@@ -6,7 +6,6 @@
     --blue: hsl(248, 32%, 49%);
     --dark-blue: hsl(249, 10%, 26%);
     --grayish-blue: hsl(246, 25%, 77%);
-
     --main-font: "Poppins";
     --font-400: 400;
     --font-500: 500;
@@ -21,6 +20,7 @@
     list-style-type: none;
     outline: none;
     text-decoration: none;
+    line-height: 100%;
 }
 
 html {
@@ -86,6 +86,8 @@ body {
     gap: 6rem;
 }
 
+/* ! Sections */
+
 .form-section {
     display: flex;
     flex-direction: column;
@@ -94,11 +96,12 @@ body {
 }
 
 
-
 .headline-section {
     color: white;
     text-align: center;
 }
+
+/* ! Heading section */
 
 .headings {
     display: flex;
@@ -114,6 +117,8 @@ body {
     font-size: 1.4rem;
     line-height: 175%;
 }
+
+/* ! Form section */
 
 .form-banner {
     background-color: var(--blue);
@@ -167,7 +172,13 @@ body {
     font-weight: 600;
     font-size: 1.5rem;
     letter-spacing: .1rem;
+    cursor: pointer;
+}
 
+.btn:hover,
+.btn:focus,
+.btn:active {
+    background-color: hsl(153, 59%, 74%);
 }
 
 .terms {
@@ -190,6 +201,7 @@ body {
 
 .input-error {
     border: 2px solid red;
+    color: var(--red);
 }
 
 .icon-error {
@@ -208,6 +220,7 @@ body {
 }
 
 /* ! Reponsiveness */
+
 @media (min-width: 1080px) {
 
     body {
@@ -222,13 +235,28 @@ body {
     .content-container {
         grid-template-columns: min(35vw, 52.5rem) min(35vw, 54rem);
         grid-template-rows: 1fr;
+        place-items: center;
         width: 100%;
-        align-items: center;
         justify-content: center;
+    }
+
+    .form-container {
+        padding: 4rem;
+        gap: 4rem;
+    }
+
+    .form {
+        gap: 2.4rem;
+    }
+
+    .text-input {
+        min-height: 6rem;
     }
 
     .headings {
         text-align: left;
+        gap: 4rem;
+        
     }
 
     .headings h1 {
