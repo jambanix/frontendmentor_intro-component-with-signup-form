@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Here](https://github.com/jambanix/frontendmentor_intro-component-with-signup-form)
+- Live Site URL: [Here](https://jambanix.github.io/frontendmentor_intro-component-with-signup-form/)
 
 ## My process
 
