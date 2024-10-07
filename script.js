@@ -1,4 +1,4 @@
-"use strict;"
+"use strict";
 
 let inputErrorMapping = {};
 const textInputs = document.querySelectorAll(".text-input");
