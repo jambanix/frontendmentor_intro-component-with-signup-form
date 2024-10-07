@@ -164,6 +164,11 @@ body {
     flex-grow: 1;
 }
 
+.text-input:active,
+.text-input:focus {
+    border: 2px solid hsla(246, 25%, 77%, 0.6);
+}
+
 .btn {
     background-color: var(--green);
     border: none;
