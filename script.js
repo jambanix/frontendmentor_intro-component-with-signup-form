@@ -79,6 +79,9 @@ const validateInput = (input) => {
 // Check all criteria met 
 const handleSubmit = () => Array.from(textInputs).every(validateInput) ?  mimicSubmit() : null;
 
-// Submission vents
+// Submission events
 submitBtn.addEventListener("click", handleSubmit);
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") handleSubmit();
+})
 
