@@ -39,12 +39,7 @@ textInputs.forEach(input => {
     const mapped = inputErrorElements(input);
     Object.assign(inputErrorMapping, mapped);
     input.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-
-        }
-        else {
-            setError(input, false);
-        }
+        if (event.key !== "Enter") setError(input, false);
     });
 })
 
@@ -57,7 +52,7 @@ const validateInput = (input) => {
     }
 
     // email
-    if (input.value === "email") {
+    if (input.getAttribute("name") === "email") {
         if(notEmpty(input) && validateEmail(input.value)) {
             setError(input, false);
             return true;
@@ -81,13 +76,9 @@ const validateInput = (input) => {
     }
 }
 
-// Submit button click event
-submitBtn.addEventListener("click", () => {
-    let valid = true;
-    textInputs.forEach(input => {
-        validateInput(input) ? valid = true : valid = false;
-    })
-    if (valid) {
-        mimicSubmit();
-    }
-});
+// Check all criteria met 
+const handleSubmit = () => Array.from(textInputs).every(validateInput) ?  mimicSubmit() : null;
+
+// Submission vents
+submitBtn.addEventListener("click", handleSubmit);
+

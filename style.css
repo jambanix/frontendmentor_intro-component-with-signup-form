@@ -151,7 +151,6 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
-
 }
 
 .text-input {
@@ -162,6 +161,7 @@ body {
     font-weight: 800;
     outline: none;
     flex-grow: 1;
+    color: black;
 }
 
 .text-input:active,
